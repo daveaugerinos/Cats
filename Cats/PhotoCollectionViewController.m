@@ -25,10 +25,10 @@ static NSString *const reuseIdentifier = @"photoCell";
 static NSString *const photoDetailVCSegueIdentifier = @"photoDetailVC";
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.photosArray = [[NSMutableArray alloc]init];
-    
     NetworkManager *networkManager = [[NetworkManager alloc] init];
     
     [networkManager getPhotos:^(NSMutableArray *photosArray, NSError * _Nullable error) {
@@ -38,10 +38,6 @@ static NSString *const photoDetailVCSegueIdentifier = @"photoDetailVC";
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Navigation
 

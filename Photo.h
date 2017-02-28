@@ -13,7 +13,8 @@
 
 @property (nonatomic, strong) UIImage *myImage;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSURL *url;
 
--(instancetype)initWithImage:(UIImage *)image andTitle:(NSString *)title;
+-(instancetype)initWithTitle:(NSString *)title andURL:(NSURL *)url;
 
 @end

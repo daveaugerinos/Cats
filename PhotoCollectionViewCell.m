@@ -25,10 +25,31 @@
 
 -(void)configureCellWithPhoto {
     
-    self.photoImageView.image = self.myPhoto.myImage;
-    self.photoTitleLabel.text = self.myPhoto.title;
+    self.photoImageView.image = nil;
+    self.photoTitleLabel.text = @"Downloading...";
     
+    NSURL *url = self.myPhoto.url;
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if(error) {
+            NSLog(@"error: %@", error.localizedDescription);
+            return;
+        }
+        
+        NSData *data = [NSData dataWithContentsOfURL:location];
+        UIImage *image = [UIImage imageWithData:data];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        
+            self.myPhoto.myImage = image;
+            self.photoImageView.image = self.myPhoto.myImage;
+            self.photoTitleLabel.text = self.myPhoto.title;
+        }];
+    }];
     
+    [downloadTask resume];
 }
 
 @end

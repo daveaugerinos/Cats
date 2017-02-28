@@ -11,6 +11,6 @@
 
 @interface NetworkManager : NSObject
 
-- (void)getPhotos:(void (^)(NSMutableArray *cats, NSError *error))completionHandler;
+- (void)getPhotos:(void (^)(NSMutableArray *photosArray, NSError *error))completionHandler;
 
 @end
