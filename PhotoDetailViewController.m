@@ -28,7 +28,7 @@
 - (void)configureWithPhoto {
     
     self.photoDetailImageView.image = self.myPhoto.myImage;
-    self.photoDetailTitleLabel.text = self.myPhoto.title;
+    self.photoDetailTitleLabel.text = self.myPhoto.myTitle;
 }
 
 @end

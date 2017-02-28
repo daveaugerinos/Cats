@@ -41,11 +41,12 @@
         for(NSDictionary *currentPhoto in photo) {
             
             NSString *title = [currentPhoto valueForKey:@"title"];
+            NSString *myID = [currentPhoto valueForKey:@"id"];
             NSString *url_m = [currentPhoto valueForKey:@"url_m"];
             
             NSURL *url = [NSURL URLWithString:url_m];
             
-            Photo *photo = [[Photo alloc] initWithTitle:title andURL:url];
+            Photo *photo = [[Photo alloc] initWithTitle:title myID:myID andURL:url];
             [resultArray addObject:photo];
         }
         
