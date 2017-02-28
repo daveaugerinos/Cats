@@ -18,6 +18,7 @@
 		A25507001E64D9C80027D657 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25506FF1E64D9C80027D657 /* PhotoCollectionViewCell.m */; };
 		A25507031E64DA560027D657 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507021E64DA560027D657 /* PhotoCollectionViewController.m */; };
 		A25507091E64DB160027D657 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507081E64DB160027D657 /* PhotoDetailViewController.m */; };
+		A255070C1E651E030027D657 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A255070B1E651E030027D657 /* NetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		A25507021E64DA560027D657 /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
 		A25507071E64DB160027D657 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailViewController.h; path = ../PhotoDetailViewController.h; sourceTree = "<group>"; };
 		A25507081E64DB160027D657 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailViewController.m; path = ../PhotoDetailViewController.m; sourceTree = "<group>"; };
+		A255070A1E651E030027D657 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		A255070B1E651E030027D657 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				A25506D91E64D41D0027D657 /* ViewController.h */,
 				A25506DA1E64D41D0027D657 /* ViewController.m */,
 				A25506DC1E64D41D0027D657 /* Main.storyboard */,
+				A255070A1E651E030027D657 /* NetworkManager.h */,
+				A255070B1E651E030027D657 /* NetworkManager.m */,
 				A25506DF1E64D41D0027D657 /* Assets.xcassets */,
 				A25506E11E64D41D0027D657 /* LaunchScreen.storyboard */,
 				A25506E41E64D41D0027D657 /* Info.plist */,
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A255070C1E651E030027D657 /* NetworkManager.m in Sources */,
 				A25506FA1E64D52D0027D657 /* Photo.m in Sources */,
 				A25506DB1E64D41D0027D657 /* ViewController.m in Sources */,
 				A25506D81E64D41D0027D657 /* AppDelegate.m in Sources */,
