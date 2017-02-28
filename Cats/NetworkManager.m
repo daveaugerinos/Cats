@@ -12,7 +12,7 @@
 
 - (void)getPhotos:(void (^)(NSMutableArray *photosArray, NSError *error))completionHandler {
     
-    NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=3bcf328b9332c8641af38f8523340589&tags=cat"];
+    NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e404956112e45a37bba6aa39c68c8bb1&tags=cat&has_geo=1&extras=url_m&format=json&nojsoncallback=1"];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:url];
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -40,18 +40,10 @@
         
         for(NSDictionary *currentPhoto in photo) {
             
-            NSString *myId = [currentPhoto valueForKey:@"id"];
-//            NSString *owner = [currentPhoto valueForKey:@"owner"];
-            NSString *secret = [currentPhoto valueForKey:@"secret"];
-            NSString *server = [currentPhoto valueForKey:@"server"];
-            NSString *farm = [currentPhoto valueForKey:@"farm"];
             NSString *title = [currentPhoto valueForKey:@"title"];
-//            NSString *isPublic = [currentPhoto valueForKey:@"ispublic"];
-//            NSString *isFriend = [currentPhoto valueForKey:@"isfriend"];
-//            NSString *isFamily = [currentPhoto valueForKey:@"isfamily"];
+            NSString *url_m = [currentPhoto valueForKey:@"url_m"];
             
-            NSString *urlString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", farm, server, myId, secret];
-            NSURL *url = [NSURL URLWithString:urlString];
+            NSURL *url = [NSURL URLWithString:url_m];
             
             Photo *photo = [[Photo alloc] initWithTitle:title andURL:url];
             [resultArray addObject:photo];
