@@ -10,6 +10,7 @@
 #import "Photo.h"
 #import "PhotoCollectionViewCell.h"
 #import "PhotoDetailViewController.h"
+#import "PhotoSearchViewController.h"
 #import "NetworkManager.h"
 
 @interface PhotoCollectionViewController ()
@@ -23,6 +24,7 @@
 
 static NSString *const reuseIdentifier = @"photoCell";
 static NSString *const photoDetailVCSegueIdentifier = @"photoDetailVC";
+static NSString *const photoSearchVCSegueIdentifier = @"photoSearchVC";
 
 - (void)viewDidLoad {
     
@@ -43,13 +45,18 @@ static NSString *const photoDetailVCSegueIdentifier = @"photoDetailVC";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    NSIndexPath *indexPath = [self.photoCollectionView indexPathForCell:sender];
     
     if ([segue.identifier isEqualToString:photoDetailVCSegueIdentifier])
     {
+        NSIndexPath *indexPath = [self.photoCollectionView indexPathForCell:sender];
         Photo *photo = [self.photosArray objectAtIndex:indexPath.item];
         PhotoDetailViewController *detailVC = segue.destinationViewController;
         detailVC.myPhoto = photo;
+    }
+    
+    if ([segue.identifier isEqualToString:photoSearchVCSegueIdentifier]) {
+        
+        PhotoSearchViewController *searchVC = segue.destinationViewController;
     }
 }
 
@@ -77,5 +84,13 @@ static NSString *const photoDetailVCSegueIdentifier = @"photoDetailVC";
     
     return cell;
 }
+
+
+- (IBAction)searchButtonTapped:(UIBarButtonItem *)sender {
+
+    [self performSegueWithIdentifier:photoSearchVCSegueIdentifier sender:self];
+}
+
+
 
 @end

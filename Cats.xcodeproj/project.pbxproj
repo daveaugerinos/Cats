@@ -19,6 +19,7 @@
 		A25507091E64DB160027D657 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507081E64DB160027D657 /* PhotoDetailViewController.m */; };
 		A255070C1E651E030027D657 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A255070B1E651E030027D657 /* NetworkManager.m */; };
 		A25507141E664A900027D657 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25507131E664A900027D657 /* MapKit.framework */; };
+		A25507171E665F030027D657 /* PhotoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507161E665F030027D657 /* PhotoSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		A255070A1E651E030027D657 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Cats/NetworkManager.h; sourceTree = "<group>"; };
 		A255070B1E651E030027D657 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Cats/NetworkManager.m; sourceTree = "<group>"; };
 		A25507131E664A900027D657 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A25507151E665F030027D657 /* PhotoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSearchViewController.h; sourceTree = "<group>"; };
+		A25507161E665F030027D657 /* PhotoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +126,6 @@
 			children = (
 				A25506FE1E64D9C80027D657 /* PhotoCollectionViewCell.h */,
 				A25506FF1E64D9C80027D657 /* PhotoCollectionViewCell.m */,
-				A25507011E64DA560027D657 /* PhotoCollectionViewController.h */,
-				A25507021E64DA560027D657 /* PhotoCollectionViewController.m */,
-				A25507071E64DB160027D657 /* PhotoDetailViewController.h */,
-				A25507081E64DB160027D657 /* PhotoDetailViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -147,6 +146,12 @@
 			children = (
 				A25506D61E64D41D0027D657 /* AppDelegate.h */,
 				A25506D71E64D41D0027D657 /* AppDelegate.m */,
+				A25507011E64DA560027D657 /* PhotoCollectionViewController.h */,
+				A25507021E64DA560027D657 /* PhotoCollectionViewController.m */,
+				A25507151E665F030027D657 /* PhotoSearchViewController.h */,
+				A25507161E665F030027D657 /* PhotoSearchViewController.m */,
+				A25507071E64DB160027D657 /* PhotoDetailViewController.h */,
+				A25507081E64DB160027D657 /* PhotoDetailViewController.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				A25506D81E64D41D0027D657 /* AppDelegate.m in Sources */,
 				A25507031E64DA560027D657 /* PhotoCollectionViewController.m in Sources */,
 				A25507001E64D9C80027D657 /* PhotoCollectionViewCell.m in Sources */,
+				A25507171E665F030027D657 /* PhotoSearchViewController.m in Sources */,
 				A25506D51E64D41D0027D657 /* main.m in Sources */,
 				A25507091E64DB160027D657 /* PhotoDetailViewController.m in Sources */,
 			);

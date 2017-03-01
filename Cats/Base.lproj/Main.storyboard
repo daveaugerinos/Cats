@@ -74,14 +74,86 @@
                             <outlet property="delegate" destination="GVf-Kk-IkO" id="oYx-BH-RTk"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Cats" id="wl6-ce-3Wm"/>
+                    <navigationItem key="navigationItem" title="Cats" id="wl6-ce-3Wm">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="2O2-sj-8Ct">
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="GVf-Kk-IkO" id="JUQ-ET-WIu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoCollectionView" destination="Q6O-Iv-VAg" id="Pkx-Gx-Za9"/>
+                        <segue destination="HW3-J5-VQb" kind="presentation" identifier="photoSearchVC" id="Pdm-28-arG"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lQ-mT-2iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="166.8665667166417"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="zgh-hg-PDX">
+            <objects>
+                <viewController title="Search" id="HW3-J5-VQb" customClass="PhotoSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBd-8k-6CS"/>
+                        <viewControllerLayoutGuide type="bottom" id="6tE-5h-PR5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ksK-jk-K9b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78u-CN-zsZ">
+                                <rect key="frame" x="26" y="40" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="HW3-J5-VQb" eventType="touchUpInside" id="LS2-mX-uIj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiz-of-Ra2">
+                                <rect key="frame" x="307" y="40" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-cE-xrN">
+                                <rect key="frame" x="26" y="100" width="315" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJW-Uo-8Vm">
+                                <rect key="frame" x="289.5" y="165" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use My Location in Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waR-ry-K2x">
+                                <rect key="frame" x="26" y="170" width="203.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-VY-xap">
+                                <rect key="frame" x="160.5" y="44" width="53.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qba-VY-xap" firstAttribute="baseline" secondItem="78u-CN-zsZ" secondAttribute="baseline" id="0lk-gY-drK"/>
+                            <constraint firstItem="fiz-of-Ra2" firstAttribute="trailing" secondItem="ksK-jk-K9b" secondAttribute="trailingMargin" constant="-18" id="7dh-bD-b8J"/>
+                            <constraint firstItem="Qba-VY-xap" firstAttribute="centerX" secondItem="ksK-jk-K9b" secondAttribute="centerX" id="DX1-D3-Ezk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfZ-cE-xrN" secondAttribute="trailing" constant="18" id="Mgg-vi-MR6"/>
+                            <constraint firstItem="waR-ry-K2x" firstAttribute="leading" secondItem="ksK-jk-K9b" secondAttribute="leadingMargin" constant="10" id="OTg-dp-FfD"/>
+                            <constraint firstItem="waR-ry-K2x" firstAttribute="centerY" secondItem="fJW-Uo-8Vm" secondAttribute="centerY" id="VII-vi-xKq"/>
+                            <constraint firstItem="fiz-of-Ra2" firstAttribute="top" secondItem="aBd-8k-6CS" secondAttribute="bottom" constant="20" id="XGL-m7-aHR"/>
+                            <constraint firstItem="78u-CN-zsZ" firstAttribute="top" secondItem="aBd-8k-6CS" secondAttribute="bottom" constant="20" id="YZp-Wk-D8C"/>
+                            <constraint firstItem="fJW-Uo-8Vm" firstAttribute="leading" secondItem="waR-ry-K2x" secondAttribute="trailing" constant="60" id="YfG-Y0-ioE"/>
+                            <constraint firstItem="dfZ-cE-xrN" firstAttribute="top" secondItem="fiz-of-Ra2" secondAttribute="bottom" constant="30" id="Zew-BI-kNo"/>
+                            <constraint firstItem="78u-CN-zsZ" firstAttribute="leading" secondItem="ksK-jk-K9b" secondAttribute="leadingMargin" constant="10" id="fls-m7-Rbb"/>
+                            <constraint firstItem="dfZ-cE-xrN" firstAttribute="leading" secondItem="ksK-jk-K9b" secondAttribute="leadingMargin" constant="10" id="s7g-d5-H0M"/>
+                            <constraint firstItem="waR-ry-K2x" firstAttribute="top" secondItem="dfZ-cE-xrN" secondAttribute="bottom" constant="26" id="zGs-Uw-etp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w17-4c-bh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.60000000000002" y="1008.8455772113944"/>
         </scene>
         <!--Cat Details-->
         <scene sceneID="23E-SG-QiS">
@@ -103,13 +175,13 @@
                                 </constraints>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-7v-bk9">
-                                <rect key="frame" x="24" y="384" width="327" height="275"/>
+                                <rect key="frame" x="24" y="354" width="327" height="305"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ei2-xH-v0W" firstAttribute="top" secondItem="IK4-7v-bk9" secondAttribute="bottom" constant="8" id="Bc8-XF-Rhe"/>
-                            <constraint firstItem="IK4-7v-bk9" firstAttribute="top" secondItem="1cX-TN-HMA" secondAttribute="bottom" constant="50" id="Eld-Oz-Wiu"/>
+                            <constraint firstItem="IK4-7v-bk9" firstAttribute="top" secondItem="1cX-TN-HMA" secondAttribute="bottom" constant="20" id="Eld-Oz-Wiu"/>
                             <constraint firstItem="1cX-TN-HMA" firstAttribute="top" secondItem="28J-lu-OOd" secondAttribute="bottom" constant="20" id="Gjq-AU-Vdq"/>
                             <constraint firstItem="IK4-7v-bk9" firstAttribute="leading" secondItem="gpW-QD-1hh" secondAttribute="leadingMargin" constant="8" id="LeJ-5a-lE2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IK4-7v-bk9" secondAttribute="trailing" constant="8" id="fSx-vV-xDc"/>

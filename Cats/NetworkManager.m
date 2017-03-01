@@ -50,7 +50,11 @@
             [resultArray addObject:photo];
         }
         
-        completionHandler(resultArray, nil);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            completionHandler(resultArray, nil);
+        }];
+
     }];
     
     [dataTask resume];
