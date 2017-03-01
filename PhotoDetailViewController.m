@@ -11,7 +11,8 @@
 @interface PhotoDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoDetailImageView;
-@property (weak, nonatomic) IBOutlet UILabel *photoDetailTitleLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *photMapView;
+
 
 @end
 
@@ -28,7 +29,10 @@
 - (void)configureWithPhoto {
     
     self.photoDetailImageView.image = self.myPhoto.myImage;
-    self.photoDetailTitleLabel.text = self.myPhoto.myTitle;
+    self.navigationItem.title = self.myPhoto.title;
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(.5f, .5f);
+    self.photMapView.region =MKCoordinateRegionMake(self.myPhoto.coordinate, span);
+    [self.photMapView addAnnotation:self.myPhoto];
 }
-
 @end

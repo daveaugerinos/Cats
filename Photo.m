@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.myTitle = title;
+        self.title = title;
         self.myURL = url;
         self.myID = myID;
     }

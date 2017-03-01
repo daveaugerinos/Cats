@@ -96,35 +96,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cX-TN-HMA">
-                                <rect key="frame" x="37" y="84" width="300" height="300"/>
+                                <rect key="frame" x="62" y="84" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="VKP-NY-Og7"/>
-                                    <constraint firstAttribute="width" constant="300" id="dRe-uF-Psz"/>
+                                    <constraint firstAttribute="height" constant="250" id="VKP-NY-Og7"/>
+                                    <constraint firstAttribute="width" constant="250" id="dRe-uF-Psz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohx-Qw-TaM">
-                                <rect key="frame" x="166" y="404" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-7v-bk9">
+                                <rect key="frame" x="24" y="384" width="327" height="275"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ohx-Qw-TaM" firstAttribute="centerX" secondItem="gpW-QD-1hh" secondAttribute="centerX" id="D4x-gR-ffr"/>
+                            <constraint firstItem="ei2-xH-v0W" firstAttribute="top" secondItem="IK4-7v-bk9" secondAttribute="bottom" constant="8" id="Bc8-XF-Rhe"/>
+                            <constraint firstItem="IK4-7v-bk9" firstAttribute="top" secondItem="1cX-TN-HMA" secondAttribute="bottom" constant="50" id="Eld-Oz-Wiu"/>
                             <constraint firstItem="1cX-TN-HMA" firstAttribute="top" secondItem="28J-lu-OOd" secondAttribute="bottom" constant="20" id="Gjq-AU-Vdq"/>
-                            <constraint firstItem="ohx-Qw-TaM" firstAttribute="top" secondItem="1cX-TN-HMA" secondAttribute="bottom" constant="20" id="fA0-XT-Vtz"/>
+                            <constraint firstItem="IK4-7v-bk9" firstAttribute="leading" secondItem="gpW-QD-1hh" secondAttribute="leadingMargin" constant="8" id="LeJ-5a-lE2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IK4-7v-bk9" secondAttribute="trailing" constant="8" id="fSx-vV-xDc"/>
                             <constraint firstItem="1cX-TN-HMA" firstAttribute="centerX" secondItem="gpW-QD-1hh" secondAttribute="centerX" id="tcc-cO-5SX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="photMapView" destination="IK4-7v-bk9" id="Ndp-Ui-EI8"/>
                         <outlet property="photoDetailImageView" destination="1cX-TN-HMA" id="lcw-Id-QTl"/>
-                        <outlet property="photoDetailTitleLabel" destination="ohx-Qw-TaM" id="fNv-Nn-s13"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPZ-Q2-cNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175" y="167"/>
+            <point key="canvasLocation" x="2173.5999999999999" y="166.8665667166417"/>
         </scene>
         <!--Cats-->
         <scene sceneID="Zp2-2V-WAm">

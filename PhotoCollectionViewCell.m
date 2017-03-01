@@ -52,7 +52,7 @@
             
             self.myPhoto.myImage = image;
             self.photoImageView.image = self.myPhoto.myImage;
-            self.photoTitleLabel.text = self.myPhoto.myTitle;
+            self.photoTitleLabel.text = self.myPhoto.title;
         }];
     }];
     

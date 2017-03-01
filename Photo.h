@@ -13,7 +13,7 @@
 @interface Photo : NSObject <MKAnnotation>
 
 @property (nonatomic, strong) UIImage *myImage;
-@property (nonatomic, strong) NSString *myTitle;
+@property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) NSString *myID;
 @property (nonatomic, strong) NSURL *myURL;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;

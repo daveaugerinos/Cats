@@ -18,6 +18,7 @@
 		A25507031E64DA560027D657 /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507021E64DA560027D657 /* PhotoCollectionViewController.m */; };
 		A25507091E64DB160027D657 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25507081E64DB160027D657 /* PhotoDetailViewController.m */; };
 		A255070C1E651E030027D657 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A255070B1E651E030027D657 /* NetworkManager.m */; };
+		A25507141E664A900027D657 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25507131E664A900027D657 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A25507081E64DB160027D657 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		A255070A1E651E030027D657 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = Cats/NetworkManager.h; sourceTree = "<group>"; };
 		A255070B1E651E030027D657 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = Cats/NetworkManager.m; sourceTree = "<group>"; };
+		A25507131E664A900027D657 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25507141E664A900027D657 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 				A25506D31E64D41D0027D657 /* Supporting Files */,
 				A25506EC1E64D41D0027D657 /* CatsTests */,
 				A25506D11E64D41D0027D657 /* Products */,
+				A25507121E664A900027D657 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +158,14 @@
 				A25506E11E64D41D0027D657 /* LaunchScreen.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		A25507121E664A900027D657 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A25507131E664A900027D657 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
